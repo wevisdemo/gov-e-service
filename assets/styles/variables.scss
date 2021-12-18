@@ -1,0 +1,14 @@
+@mixin media-breakpoint($size) {
+  @if $size == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+$color-green: #28ff71;
+$color-blue: #000e8b;

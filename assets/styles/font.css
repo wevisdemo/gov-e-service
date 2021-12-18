@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Anuphan";
+  src: url("~assets/fonts/Anuphan-Bold.woff2") format("woff2"),
+    url("~assets/fonts/Anuphan-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("~assets/fonts/Anuphan-Regular.woff2") format("woff2"),
+    url("~assets/fonts/Anuphan-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

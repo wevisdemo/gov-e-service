@@ -1,8 +1,6 @@
 <template>
   <div class="index-page">
-    <h1>Hello</h1>
-
-    <h2>สวัสดี</h2>
+    <IntroSection />
   </div>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <div class="index-page">
     <IntroSection />
+
+    <ThaiSection />
   </div>
 </template>
 

@@ -123,11 +123,19 @@
 </template>
 
 <script>
+import _ from "lodash";
 import review_nz_data from "~/static/data/review_nz.json";
 import review_uk_data from "~/static/data/review_uk.json";
-import world_data from "~/static/data/world.json";
 
 export default {
+  props: {
+    world_data: {
+      type: Array,
+      default: () => {
+        return [];
+      },
+    },
+  },
   data() {
     return {
       telescope_emoji: require("~/assets/images/emoji/telescope.png"),
@@ -155,7 +163,7 @@ export default {
   },
   computed: {
     country_options() {
-      let countries = _.filter(world_data, (d) =>
+      let countries = _.filter(this.world_data, (d) =>
         [
           "United Kingdom of Great Britain and Northern Ireland",
           "New Zealand",

@@ -3,11 +3,17 @@
     <IntroSection />
 
     <ThaiSection />
+
+    <TopCountriesSection />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    window.Sharer.init();
+  },
+};
 </script>
 
 <style lang="scss" scoped>

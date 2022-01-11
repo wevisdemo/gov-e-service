@@ -76,11 +76,10 @@
       <div class="b1">สงสัยล่ะสิ ว่าเค้าใช้เกณฑ์อะไรในการประเมิน</div>
     </div>
 
-    <div class="measurement-wrap">
+    <div class="egdi-wrap">
       <div class="head">
         <h5>
-          <span>E-Government Development Index (EGDI)</span> มีเกณฑ์ในการวัด 3
-          ด้าน
+          <b>E-Government Development Index (EGDI)</b> มีเกณฑ์ในการวัด 3 ด้าน
         </h5>
 
         <div class="b1">
@@ -254,24 +253,148 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="chart-wrap">
-        <el-select
-          v-model="measurement_select_country"
-          filterable
-          placeholder="เลือกประเทศเปรียบเทียบ"
-          class="select-country"
+    <div class="index-chart-wrap">
+      <el-select
+        v-model="index_select_country"
+        filterable
+        placeholder="เลือกประเทศเปรียบเทียบ"
+        class="select-country"
+      >
+        <el-option
+          v-for="item in world_data_options"
+          :key="item['Country Name']"
+          :label="item['Country Name']"
+          :value="item['Country Name']"
         >
-          <el-option
-            v-for="item in world_data_options"
-            :key="item['Country Name']"
-            :label="item['Country Name']"
-            :value="item['Country Name']"
-          >
-          </el-option>
-        </el-select>
+        </el-option>
+      </el-select>
 
-        <RadarChart :data="world_data" />
+      <RadarChart :data="world_data" :select_country="index_select_country" />
+    </div>
+
+    <div class="epi-wrap">
+      <div class="head">
+        <h5>
+          ส่วน
+          <b>e-participation index (EPI)</b>
+          ใช้วัดการสร้างความโปร่งใสของภาครัฐ ในการเปิดโอกาสให้ภาคประชาชน
+          ได้เข้ามามีส่วนร่วม 3 ระดับ
+        </h5>
+      </div>
+
+      <div class="row">
+        <div class="card-wrap">
+          <img :src="e_1_emoji" :alt="e_1_emoji" />
+
+          <div class="card">
+            <div class="b1"><b>E-information</b></div>
+
+            <div class="b2">
+              เป็นสื่อสารทางเดียวจากรัฐที่เปิดให้ข้อมูลสาธารณะแก่ประชาชนผ่านเว็บไซต์
+              และให้ประชาชนเข้าถึงข้อมูลได้ เช่น กฎหมาย , ระเบียบ , นโยบายต่างๆ
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrap">
+          <img :src="e_2_emoji" :alt="e_2_emoji" />
+
+          <div class="card">
+            <div class="b1"><b>E-consultation</b></div>
+
+            <div class="b2">
+              เปิดให้เป็นการสื่อสารสองทางมากขึ้น ที่รัฐมีปฏิสัมพันธ์กับประชาชน
+              เช่น ให้คำปรึกษา ประชาชนสามารถเข้ามาแสดงความคิดเห็น เสนอแนะแนวทาง
+              และคอยตอบคำถามจากภาคประชาชน
+              สามารถใช้เครื่องมือออนไลน์ในการมีส่วนร่วม เช่น บล็อก ,
+              เครือข่ายสังคมออนไลน์ , เครื่องมือตอบโต้
+            </div>
+          </div>
+        </div>
+
+        <div class="card-wrap">
+          <img :src="e_3_emoji" :alt="e_3_emoji" />
+
+          <div class="card">
+            <div class="b1"><b>E-decision-making</b></div>
+
+            <div class="b2">
+              มีช่องทางเปิดการมีส่วนร่วมประชาชน
+              สามารถตัดสินใจออกแบบนโยบายร่วมกันได้
+              และภาครัฐจะต้องแจ้งผลจากการตัดสินใจบนพื้นฐานของกระบวนการให้คำปรึกษา
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="internet-wrap">
+      <div class="head">
+        <div class="b1">
+          ปัจจุบัน ประเทศไทยมีผู้ใช้อินเทอร์เน็ตถึง <b>73.4% ของประชากร</b>
+        </div>
+
+        <div class="b4">(48.59 ล้านคน จากประชากร 66.19 ล้านคน)</div>
+
+        <div class="b1 highlight">
+          <b>เพิ่มขึ้นจากปีที่แล้ว 9.7%</b>
+        </div>
+      </div>
+
+      <div class="emoji-list">
+        <div v-for="(item, index) in 100" :key="index" class="emoji-wrap">
+          <img
+            v-if="item > 73"
+            :src="no_internet_emoji"
+            :alt="no_internet_emoji"
+            class="emoji no-internet"
+          />
+
+          <template v-else>
+            <img :src="internet_emoji" :alt="internet_emoji" class="emoji" />
+
+            <img
+              v-if="item > 62 && item < 74"
+              :src="internet_stroke_green_emoji"
+              :alt="internet_stroke_green_emoji"
+              class="emoji emoji-stroke"
+            />
+
+            <img
+              v-else
+              :src="internet_stroke_blue_emoji"
+              :alt="internet_stroke_blue_emoji"
+              class="emoji emoji-stroke"
+            />
+          </template>
+        </div>
+      </div>
+
+      <div class="per-day-wrap">
+        <div class="b1">
+          และใช้อินเทอร์เน็ต <b>8 ชั่วโมง 44 นาทีต่อวัน</b> สูงเป็นอันดับ 9
+          ของโลก
+        </div>
+
+        <div class="doughnut-wrap">
+          <DoughnutChart />
+
+          <img :src="eyes_emoji" :alt="eyes_emoji" class="emoji" />
+
+          <img
+            :src="eye_stroke_emoji"
+            :alt="eye_stroke_emoji"
+            class="emoji emoji-stroke"
+          />
+        </div>
+
+        <div class="h7">
+          แม้ e-service ในประเทศไทยจะไม่ถือว่าแย่
+          แต่เราเชื่อว่ามันสามารถดีได้กว่านี้อีก!
+          เพื่อรองรับแนวโน้มการใช้อินเทอร์เน็ตของคนไทยที่เพิ่มขึ้นเรื่อยๆ
+        </div>
       </div>
     </div>
   </div>
@@ -306,8 +429,17 @@ export default {
       hci_2_emoji: require("~/assets/images/emoji/egdi_emoji/hci_2.png"),
       hci_3_emoji: require("~/assets/images/emoji/egdi_emoji/hci_3.png"),
       hci_4_emoji: require("~/assets/images/emoji/egdi_emoji/hci_4.png"),
+      e_1_emoji: require("~/assets/images/emoji/epi_emoji/e_1.png"),
+      e_2_emoji: require("~/assets/images/emoji/epi_emoji/e_2.png"),
+      e_3_emoji: require("~/assets/images/emoji/epi_emoji/e_3.png"),
+      internet_emoji: require("~/assets/images/emoji/internet.gif"),
+      no_internet_emoji: require("~/assets/images/emoji/no_internet.png"),
+      internet_stroke_blue_emoji: require("~/assets/images/emoji/internet_stroke_blue.png"),
+      internet_stroke_green_emoji: require("~/assets/images/emoji/internet_stroke_green.png"),
+      eyes_emoji: require("~/assets/images/emoji/eyes.gif"),
+      eye_stroke_emoji: require("~/assets/images/emoji/eye_stroke.png"),
       research_select_country: "",
-      measurement_select_country: "",
+      index_select_country: "",
     };
   },
   computed: {
@@ -391,13 +523,14 @@ export default {
       animation: thinking 4s infinite;
     }
   }
-  .measurement-wrap {
+  .egdi-wrap {
     margin-top: 180px;
     .head {
       max-width: 650px;
       margin: 0 auto;
       h5 {
-        span {
+        font-weight: normal;
+        b {
           color: $color-green;
         }
       }
@@ -466,8 +599,128 @@ export default {
         }
       }
     }
-    .chart-wrap {
-      margin-top: 140px;
+  }
+  .index-chart-wrap {
+    margin-top: 140px;
+  }
+  .epi-wrap {
+    margin-top: 180px;
+    .head {
+      max-width: 650px;
+      margin: 0 auto;
+      h5 {
+        font-weight: normal;
+        b {
+          color: $color-green;
+        }
+      }
+      .b1 {
+        margin-top: 15px;
+      }
+    }
+    .row {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+      .card-wrap {
+        width: 300px;
+        margin: 0 15px;
+        .label {
+          color: white;
+          background: black;
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          line-height: 60px;
+          margin: 0 auto;
+        }
+        img {
+          width: 108px;
+        }
+        .card {
+          border-radius: 10px;
+          background: white;
+          padding: 30px 10px;
+          color: black;
+          margin-top: 10px;
+
+          .b2 {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .internet-wrap {
+    margin-top: 250px;
+    .head {
+      max-width: 650px;
+      margin: 0 auto;
+      .b4 {
+        margin-top: 5px;
+      }
+      .highlight {
+        color: $color-green;
+        margin-top: 5px;
+      }
+    }
+    .emoji-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1280px;
+      margin: 56px auto 0 auto;
+      .emoji-wrap {
+        position: relative;
+        width: 44px;
+        height: 40px;
+        margin: 20px 9px 0 9px;
+        img.emoji {
+          width: 44px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        img.emoji.no-internet {
+          opacity: 0.5;
+        }
+        img.emoji-stroke {
+          width: 45px;
+        }
+      }
+    }
+    .per-day-wrap {
+      max-width: 650px;
+      margin: 90px auto 0 auto;
+      b {
+        color: $color-green;
+      }
+      .doughnut-wrap {
+        width: 254px;
+        height: 254px;
+        margin: 50px auto 0 auto;
+        position: relative;
+        img {
+          width: 120px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        img.emoji-stroke {
+          width: 121px;
+        }
+        .doughnut-chart {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .h7 {
+        margin-top: 90px;
+      }
     }
   }
 }

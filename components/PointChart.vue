@@ -130,7 +130,6 @@ export default {
   mounted() {
     this.render_tooltip = true;
   },
-  methods: {},
 };
 </script>
 

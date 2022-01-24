@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -26,6 +26,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "element-ui/lib/theme-chalk/index.css",
+    "@wevisdemo/ui/components/styles.css",
     "~/assets/styles/font.css",
     "~/assets/styles/index.scss",
   ],

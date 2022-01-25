@@ -5,9 +5,13 @@
 
       <div class="type-wrap">
         <div v-for="(legend, index) in legends" :key="index" class="type b2">
-          <img :src="legend.image" :alt="legend.image" />
+          <div class="image">
+            <img :src="legend.image" :alt="legend.image" />
+          </div>
 
-          {{ legend.name }}
+          <span>
+            {{ legend.name }}
+          </span>
         </div>
       </div>
 
@@ -52,7 +56,7 @@
           </div>
 
           <div v-else class="b2 no-image">
-            ไม่มีการใช้บัตรประชาชนแล้ว ให้ใช้passportแทน
+            ไม่มีการใช้บัตรประชาชนแล้ว ให้ใช้ passport แทน
           </div>
         </div>
       </div>
@@ -64,7 +68,7 @@
           :src="back_icon"
           :alt="back_icon"
           class="btn-back"
-          @click="show_step_detail = false"
+          @click="hideStepDetail"
         />
 
         <div class="content">
@@ -140,10 +144,15 @@ export default {
     },
   },
   methods: {
+    hideStepDetail() {
+      this.show_step_detail = false;
+      document.body.style.overflowY = "auto";
+    },
     selectStep(data) {
       if (data.images.length < 1) return;
       this.show_step_detail = true;
       this.step_detail = data;
+      document.body.style.overflowY = "hidden";
     },
     setReviewData() {
       this.review_data = [];
@@ -168,7 +177,9 @@ export default {
           let img_id = 0;
 
           for (const img_property in img_obj) {
-            const type = `${d.emoji}`.includes(`${img_id}`) ? "emoji" : "image";
+            const type = `${d.emoji}`.split(",").includes(`${img_id}`)
+              ? "emoji"
+              : "image";
             const path = require(`~/assets/images/${this.image_path}/${d.service_id}/${img_id}.jpg`);
             images.push({ type, text: img_obj[img_property], path });
             img_id++;
@@ -196,6 +207,9 @@ export default {
     border: 1px dashed rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     margin: 0 auto;
+    @include media-breakpoint(mobile) {
+      width: 80%;
+    }
     .b2 {
       color: rgba(255, 255, 255, 0.8);
     }
@@ -203,12 +217,30 @@ export default {
       display: flex;
       justify-content: center;
       margin-top: 10px;
+      @include media-breakpoint(mobile) {
+        display: block;
+      }
       .type {
         color: rgba(255, 255, 255, 0.8);
         margin: 0 12px;
-        img {
-          height: 20px;
+        display: flex;
+        @include media-breakpoint(mobile) {
+          justify-content: center;
+        }
+        .image {
+          width: 30px;
           margin-right: 8px;
+          img {
+            height: 20px;
+            margin: 0 auto;
+          }
+        }
+        span {
+          @include media-breakpoint(mobile) {
+            min-width: 80px;
+            text-align: left;
+            display: inline-block;
+          }
         }
       }
     }
@@ -234,9 +266,16 @@ export default {
           text-align: right;
           margin-right: 20px;
           flex: none;
+          @include media-breakpoint(mobile) {
+            margin-right: 10px;
+            width: 40%;
+          }
         }
         img {
           width: 40px;
+          @include media-breakpoint(mobile) {
+            width: 30px;
+          }
         }
       }
       .detail {
@@ -250,6 +289,10 @@ export default {
           text-align: right;
           margin-right: 20px;
           flex: none;
+          @include media-breakpoint(mobile) {
+            margin-right: 10px;
+            width: 40%;
+          }
         }
         .images {
           display: flex;
@@ -258,13 +301,20 @@ export default {
             margin: 0 3px;
             width: 30px;
             height: 20px;
+            @include media-breakpoint(mobile) {
+              margin: 0 1px;
+            }
           }
           .image {
             object-fit: cover;
+            @include media-breakpoint(mobile) {
+              width: 5px;
+            }
           }
         }
         .no-image {
           color: rgba(255, 255, 255, 0.5);
+          text-align: left;
         }
       }
       .detail:hover {
@@ -283,6 +333,9 @@ export default {
     bottom: 0;
     padding: 170px 0 100px 0;
     overflow-y: auto;
+    @include media-breakpoint(mobile) {
+      padding: 100px 0 80px 0;
+    }
     .btn-back {
       cursor: pointer;
       width: 50px;
@@ -290,9 +343,12 @@ export default {
       margin-right: auto;
       position: fixed;
       top: 100px;
+      @include media-breakpoint(mobile) {
+        top: 20px;
+      }
     }
     .content {
-      max-width: 650px;
+      max-width: 400px;
       margin: 0 auto;
       h5 {
         color: $color-green;

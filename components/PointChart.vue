@@ -51,6 +51,7 @@
         :class="{
           point: true,
           'is-thai': item['Country Name'] === 'Thailand',
+          'is-seleced': item['Country Name'] === select_country,
         }"
       >
         <div class="b2">
@@ -193,7 +194,22 @@ export default {
       z-index: 1;
       background: $color-green;
       border: 1px solid black;
+      animation: twinkle 0.6s infinite;
     }
+    .point.is-seleced {
+      border: 2px solid white;
+    }
+  }
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 </style>

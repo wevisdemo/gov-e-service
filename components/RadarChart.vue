@@ -135,6 +135,9 @@ export default {
         type: "radar",
         data: data,
         options: {
+          animation: {
+            duration: 0,
+          },
           plugins: {
             legend: {
               display: false,
@@ -176,6 +179,10 @@ export default {
   height: 525px;
   margin: 90px auto 0 auto;
   position: relative;
+  @include media-breakpoint(mobile) {
+    width: 100%;
+    height: auto;
+  }
   .circle {
     position: absolute;
     width: 50px;
@@ -192,11 +199,11 @@ export default {
     transform: translateX(-50%);
   }
   .circle.left {
-    bottom: 0;
+    bottom: 12%;
     left: 0;
   }
   .circle.right {
-    bottom: 0;
+    bottom: 12%;
     right: 0;
   }
   .tooltip-wrap {

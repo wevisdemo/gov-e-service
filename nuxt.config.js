@@ -1,3 +1,7 @@
+const og_image = `${process.env.WEB_URL}/og.png`;
+const title = "";
+const description = "";
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
@@ -7,17 +11,67 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "gov-e-service",
+    title: title,
     htmlAttrs: {
       lang: "en",
     },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      { hid: "description", name: "description", content: description },
       { name: "format-detection", content: "telephone=no" },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: title,
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: description,
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website",
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: og_image,
+      },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: process.env.WEB_URL,
+      },
+      {
+        hid: "twitter:title",
+        name: "twitter:title",
+        content: title,
+      },
+      {
+        hid: "twitter:description",
+        name: "twitter:description",
+        content: description,
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        hid: "twitter:image",
+        name: "twitter:image",
+        content: og_image,
+      },
+      {
+        hid: "twitter:url",
+        property: "twitter:url",
+        content: process.env.WEB_URL,
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
     script: [
       { src: "https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js" },
     ],

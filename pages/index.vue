@@ -20,6 +20,7 @@ import WvNavbar from "@wevisdemo/ui/components/navbar.vue";
 import WvFooter from "@wevisdemo/ui/components/footer.vue";
 
 export default {
+  components: { WvNavbar, WvFooter },
   data() {
     return {
       world_data: world_data,
@@ -28,7 +29,6 @@ export default {
   mounted() {
     window.Sharer.init();
   },
-  components: { WvNavbar, WvFooter },
 };
 </script>
 

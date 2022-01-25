@@ -1,13 +1,15 @@
 <template>
   <div class="intro-section">
-    <img
-      v-for="(item, index) in number_images"
-      :ref="`floating_image_${item}`"
-      :key="index"
-      :src="require(`~/assets/images/intro/floating_img/${item}.jpg`)"
-      :alt="require(`~/assets/images/intro/floating_img/${item}.jpg`)"
-      class="floating-image"
-    />
+    <template v-if="!['mobile', 'tablet'].includes($mq)">
+      <img
+        v-for="(item, index) in number_images"
+        :ref="`floating_image_${item}`"
+        :key="index"
+        :src="require(`~/assets/images/intro/floating_img/${item}.jpg`)"
+        :alt="require(`~/assets/images/intro/floating_img/${item}.jpg`)"
+        class="floating-image"
+      />
+    </template>
 
     <div class="life-hack">
       <div>
@@ -28,11 +30,11 @@
           เรียกว่า
         </div>
 
-        <div>Gov e-Service เพื่อให้บริการประชาชน</div>
+        <div>e-Government Service เพื่อให้บริการประชาชน</div>
       </div>
 
       <button @click="show_dialog = true" class="b2">
-        งงว่า Gov e-Service คืออะไร <b>คลิก!</b>
+        งงว่า e-Government Service คืออะไร <b>คลิก!</b>
       </button>
 
       <div class="b1">
@@ -55,7 +57,7 @@
     </div>
 
     <el-dialog :visible.sync="show_dialog" width="490px">
-      <div class="b1"><b>Gov e-Service คืออะไร?</b></div>
+      <div class="b1"><b>e-Government Service คืออะไร?</b></div>
 
       <div class="b2">
         การบริการของภาครัฐผ่านช่องทางออนไลน์เพื่อ
@@ -63,7 +65,7 @@
       </div>
 
       <div class="b1" style="margin-top: 20px">
-        <b>Gov e-Service มีประโยชน์อย่างไร?</b>
+        <b>e-Government Service มีประโยชน์อย่างไร?</b>
       </div>
 
       <div class="b2">
@@ -130,6 +132,7 @@ export default {
     height: 20px;
     object-fit: cover;
     position: absolute;
+    z-index: 1;
   }
   .x1 {
     -webkit-animation: animateBubble 15s linear infinite,
@@ -217,18 +220,30 @@ export default {
     align-items: center;
     justify-content: center;
     position: relative;
+    @include media-breakpoint(mobile) {
+      padding: 24px 0;
+      min-height: 70vh;
+    }
     img {
       display: block;
     }
     .image {
       width: 65vw;
       margin: 0 auto;
+      @include media-breakpoint(mobile) {
+        width: 80vw;
+      }
     }
     .emoji {
       width: 80px;
       margin: 10px auto 0 auto;
       animation: updown 0.6s infinite;
       position: relative;
+      z-index: 1;
+      @include media-breakpoint(mobile) {
+        width: 50px;
+        margin: 100px auto 0 auto;
+      }
     }
     .intro {
       width: 505px;
@@ -237,6 +252,11 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: 1;
+      @include media-breakpoint(mobile) {
+        width: 80vw;
+        top: 60%;
+      }
     }
   }
   .content {
@@ -244,7 +264,10 @@ export default {
     margin: 0 auto;
     padding: 70px 0 140px 0;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    @include media-breakpoint(mobile) {
+      padding: 50px 16px;
+    }
     .b1 {
       > div {
         background: black;

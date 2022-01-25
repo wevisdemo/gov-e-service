@@ -74,21 +74,55 @@
       <div class="b1">
         สำหรับเรา
         สิ่งที่น่าอิจฉาที่สุดคือการที่ทุกกิจกรรมถูกรวมไว้ในเว็บไซต์เดียวกัน
-        ซึ่งนอกจากจะทำให้ไม่ต้องเสียเวลาในการงมหาตัวเว็บแล้ว
-        ยังทำให้เราคุ้นเคยกับโครงสร้างและลักษณะการแบ่งประเด็นของเว็บ
+        ทำให้ไม่ต้องเสียเวลาหาตัวเว็บและทำให้เราคุ้นเคยกับโครงสร้างและลักษณะการแบ่งประเด็น
         จนพอเดาได้ว่าอะไรน่าจะอยู่ตรงไหน
         ไม่ต้องมานั่งเรียนรู้การใช้งานเว็บหน้าตาใหม่ทุกครั้ง
         หรือเปลืองพื้นที่มือถือในการดาวน์โหลดแอปพลิเคชันมากมาย
+        <br /><br />
         ที่สำคัญคือกระบวนการส่วนใหญ่สามารถจบได้ในออนไลน์ หรือถ้าเป็นระบบจองคิว
         ก็จะมีส่วนที่ให้ทำล่วงหน้าได้เพื่อลดเวลาในสถานที่จริง เช่น
         การกรอกข้อมูลจำนวนมาก
-        ในขณะที่ของไทยที่ส่วนใหญ่เป็นเพียงระบบการจองคิวเท่านั้น
+        <br /><br />
         แถมบางประเทศยังล้ำ ถึงขั้นระบุถึงตัวตน เซ็นชื่อผ่านออนไลน์ได้
         ซึ่งสอดรับกับจำนวนการใช้อินเทอร์เน็ตที่มากขึ้น
-        และสถานการณ์การแพร่ระบาดของเชื้อโควิด - 19 ที่เราเจออยู่ตอนนี้สุดๆ
+        และสถานการณ์การแพร่ระบาดของเชื้อ<span style="white-space: nowrap"
+          >โควิด - 19</span
+        >
+        ที่เราเจออยู่ตอนนี้สุดๆ <br /><br />
+        ส่วนของไทย
         <br /><br />
-        เราหวังว่า ความเห็นจากทุกคนและตัวอย่างจากประเทศที่ได้คะแนนสูงๆ
-        จะเป็นแรงบันดาลใจในการปรับปรุงบริการ Gov e-Service
+        เราต้องยอมรับว่ามีหลายเว็บและแอปที่กำลังพัฒนาดีขึ้น อย่างแอป
+        <a
+          href="https://www.dga.or.th/our-services/one-stop-service/citizeninfo/application-citizeninfo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >CITIZENinfo</a
+        >
+        ที่รวมการให้ข้อมูลและค้นหาสถานที่ของหลายบริการ
+        สามารถอ่านข้อมูลได้ก่อนเริ่มใช้บริการ และ<a
+          href="https://czp.dga.or.th/cportal/sdk/landing/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >แอปทางรัฐ</a
+        >มีรวมบริการที่ใช้บ่อยๆไว้ให้ เช่น LandsMaps ประกันสังคม Smart Job
+        นอกจากนี้ยังมี<a
+          href="https://www.egov.go.th/th/index.php"
+          target="_blank"
+          rel="noopener noreferrer"
+          >เว็บไซต์กลางบริการอิเล็กทรอนิกส์ภาครัฐ</a
+        >ที่รวมเว็บไซต์ตามประเด็นต่างๆ ซึ่งถือเป็นการทำบริการทางทิศทางที่ดี
+        <br /><br />
+        *ที่ไม่เลือกแอป
+        <a
+          href="https://www.dga.or.th/our-services/one-stop-service/citizeninfo/application-citizeninfo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >CITIZENinfo</a
+        >
+        ทางรัฐ หรือเว็บกลาง เนื่องจากมุ่งเน้นเรื่องการเข้ารับบริการได้เลย เช่น
+        จองคิว รวมขั้นตอนการใช้งาน <br /><br />
+        สุดท้ายหวังว่า ความเห็นจากทุกคนและตัวอย่างจากประเทศที่ได้คะแนนสูงๆ
+        จะเป็นแรงบันดาลใจในการปรับปรุงบริการ e-Government Service
         ของเราให้ดียิ่งขึ้นไปอีกกกก
       </div>
     </div>
@@ -215,6 +249,9 @@ export default {
   background: black;
   color: white;
   padding: 120px 0;
+  @include media-breakpoint(mobile) {
+    padding: 50px 16px 100px 16px;
+  }
   .head {
     img {
       width: 80px;
@@ -225,8 +262,14 @@ export default {
   }
   .select-country {
     margin: 94px auto 0 auto;
-    width: 95vw;
+    max-width: 95vw;
     display: flex;
+    overflow-x: auto;
+    padding-bottom: 24px;
+    @include media-breakpoint(mobile) {
+      margin: 94px -8px 0 -8px;
+      max-width: 100vw;
+    }
     button {
       flex: 1;
       border-radius: 20px;
@@ -234,11 +277,19 @@ export default {
       margin: 0 8px;
       padding: 40px;
       opacity: 0.2;
+      background: white;
+      @include media-breakpoint(mobile) {
+        width: 200px;
+        flex: none;
+        padding: 30px 5px;
+        margin: 0 5px;
+      }
       img {
         width: 60px;
       }
       h3 {
         margin-top: 10px;
+        word-break: break-all;
       }
       .b2 {
         margin-top: 5px;
@@ -250,7 +301,9 @@ export default {
   }
   .step-wrap {
     padding-top: 100px;
-
+    @include media-breakpoint(mobile) {
+      padding-top: 50px;
+    }
     .estonia-step {
       max-width: 650px;
       margin: 0 auto;
@@ -266,6 +319,9 @@ export default {
   .jealous-wrap {
     max-width: 650px;
     margin: 200px auto 0 auto;
+    @include media-breakpoint(mobile) {
+      margin: 90px auto 0 auto;
+    }
     img {
       width: 60px;
     }
@@ -274,6 +330,9 @@ export default {
     }
     .b1 {
       margin-top: 20px;
+      a {
+        color: white;
+      }
     }
   }
   .share-wrap {

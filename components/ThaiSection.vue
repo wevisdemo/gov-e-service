@@ -11,8 +11,9 @@
       <img :src="letter_emoji" :alt="letter_emoji" class="emoji" />
 
       <div class="title b1">
-        นอกเหนือจากที่เรารวบรวมมาให้ คุณมีปัญหาเกี่ยวกับการใช้งาน Gov-e-service
-        อื่น ๆ ที่อยากเสริมมั้ย
+        นอกเหนือจากที่เรารวบรวมมาให้
+        คุณมีช่องทางอื่นอยากแนะนำหรือแชร์ปัญหาเกี่ยวกับการใช้งาน e-Government
+        Service อื่นๆ อีกไหม
         <b>เราจะรวบรวมไปยื่นต่อสำนักงานพัฒนารัฐบาลดิจิทัล (DGA) ให้</b>
       </div>
 
@@ -175,8 +176,8 @@ export default {
           value: "26 - 30 ปี",
         },
         {
-          name: "30 - 35 ปี",
-          value: "30 - 35 ปี",
+          name: "31 - 35 ปี",
+          value: "31 - 35 ปี",
         },
         {
           name: "36 - 40 ปี",
@@ -246,9 +247,15 @@ export default {
   background: black;
   color: white;
   padding: 100px 0;
+  @include media-breakpoint(mobile) {
+    padding: 40px 16px;
+  }
   .form-wrap {
     max-width: 720px;
     margin: 170px auto 0 auto;
+    @include media-breakpoint(mobile) {
+      margin: 24px auto 0 auto;
+    }
     .emoji {
       width: 70px;
     }
@@ -323,6 +330,9 @@ export default {
   }
   .share-wrap {
     margin-top: 135px;
+    @include media-breakpoint(mobile) {
+      margin-top: 50px;
+    }
     .social {
       margin-top: 10px;
       img {

@@ -1,7 +1,5 @@
 <template>
   <div class="index-page">
-    <WvNavbar />
-
     <IntroSection />
 
     <ThaiSection />
@@ -9,18 +7,13 @@
     <WorldSection :world_data="world_data" />
 
     <TopCountriesSection :world_data="world_data" />
-
-    <WvFooter />
   </div>
 </template>
 
 <script>
 import world_data from "~/static/data/world.json";
-import WvNavbar from "@wevisdemo/ui/components/navbar.vue";
-import WvFooter from "@wevisdemo/ui/components/footer.vue";
 
 export default {
-  components: { WvNavbar, WvFooter },
   data() {
     return {
       world_data: world_data,

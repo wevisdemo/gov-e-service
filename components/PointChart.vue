@@ -155,6 +155,9 @@ export default {
       .line {
         width: 350px;
         border: 1px solid $color-purple;
+        @include media-breakpoint(mobile) {
+          flex: 1;
+        }
       }
     }
     .x.is-first,
@@ -219,6 +222,8 @@ export default {
   border: none;
   border-radius: 0;
   color: black;
+  max-width: 40vw;
+  min-width: auto;
   .b3 {
     color: rgba(0, 0, 0, 0.6);
   }

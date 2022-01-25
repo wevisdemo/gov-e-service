@@ -1,6 +1,8 @@
 const og_image = `${process.env.WEB_URL}/og.png`;
-const title = "";
-const description = "";
+const title =
+  "Life Hack ชี้เป้า!! รวมช่องทางใช้งาน e-service ของรัฐบาลที่ในชีวิตนี้คุณหนีไม่พ้นแน่นอน";
+const description =
+  "รวบรวมข้อมูล ช่องทางที่ง่าย และวิธีการใช้บริการภาครัฐที่เกี่ยวข้องกับชีวิตประจำวัน";
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -95,7 +97,7 @@ export default {
   buildModules: ["@nuxtjs/style-resources"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [["nuxt-mq"]],
+  modules: [["nuxt-mq"], "@nuxtjs/firebase"],
   // "@nuxtjs/firebase"
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -118,19 +120,19 @@ export default {
     },
   },
 
-  // firebase: {
-  //   config: {
-  //     apiKey: "AIzaSyCmQqrn5sbWc5wpym8qo7cW77Sn-qebNdE",
-  //     authDomain: "undp-youth.firebaseapp.com",
-  //     databaseURL:
-  //       "https://undp-youth-default-rtdb.asia-southeast1.firebasedatabase.app",
-  //     projectId: "undp-youth",
-  //     storageBucket: "undp-youth.appspot.com",
-  //     messagingSenderId: "1072255283587",
-  //     appId: "1:1072255283587:web:ca5b5beacec5ab0cb006b6",
-  //   },
-  //   services: {
-  //     database: true,
-  //   },
-  // },
+  firebase: {
+    config: {
+      apiKey: "AIzaSyAc2DCO4B8HvymfpYLz6En3Gy1fSBdrdEk",
+      authDomain: "gov-e-service.firebaseapp.com",
+      databaseURL:
+        "https://gov-e-service-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "gov-e-service",
+      storageBucket: "gov-e-service.appspot.com",
+      messagingSenderId: "903415504860",
+      appId: "1:903415504860:web:9052a8a7a0e76efa02b919",
+    },
+    services: {
+      database: true,
+    },
+  },
 };

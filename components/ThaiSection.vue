@@ -227,16 +227,24 @@ export default {
     },
   },
   methods: {
-    submitForm() {
+    async submitForm() {
+      const ref = this.$fire.database.ref("form");
+      const key = ref.push().key;
       this.show_success_dialog = true;
 
-      setTimeout(() => {
-        this.show_success_dialog = false;
-        this.form.problem = "";
-        this.form.gender = "";
-        this.form.age = "";
-        this.form.address = "";
-      }, 1000);
+      try {
+        await ref.child(key).set(this.form);
+
+        setTimeout(() => {
+          this.show_success_dialog = false;
+          this.form.problem = "";
+          this.form.gender = "";
+          this.form.age = "";
+          this.form.address = "";
+        }, 1000);
+      } catch (e) {
+        this.$message.error("ไม่สามารถส่งข้อมูลได้ โปรดลองใหม่อีกครั้ง");
+      }
     },
   },
 };

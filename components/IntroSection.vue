@@ -106,10 +106,13 @@ export default {
   async mounted() {
     this.render = true;
     await this.$nextTick();
-    this.floatimages();
+
+    if (!["mobile", "tablet"].includes(this.$mq)) {
+      this.floatImages();
+    }
   },
   methods: {
-    floatimages() {
+    floatImages() {
       for (const property in this.$refs) {
         const position_left =
           Math.floor(Math.random() * 100 + 1).toFixed(2) + "%";

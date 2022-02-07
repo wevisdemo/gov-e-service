@@ -483,7 +483,7 @@ export default {
   .select-country {
     width: 280px;
     margin-top: 40px;
-    /deep/ {
+    ::v-deep {
       input {
         border: 1px solid $color-purple;
         border-radius: 0;

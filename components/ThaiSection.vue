@@ -271,7 +271,7 @@ export default {
     }
     .el-form-item {
       margin-bottom: 45px;
-      /deep/ {
+      ::v-deep {
         .el-form-item__label {
           color: white;
           font-size: 18px;
@@ -320,7 +320,7 @@ export default {
     }
   }
   .success-dialog {
-    /deep/ {
+    ::v-deep {
       .el-dialog__header {
         display: none;
       }

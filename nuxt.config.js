@@ -98,7 +98,7 @@ export default {
   buildModules: ["@nuxtjs/style-resources"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [["nuxt-mq"], "@nuxtjs/firebase"],
+  modules: [["nuxt-mq"], "@nuxtjs/firebase", "vue-plausible"],
   // "@nuxtjs/firebase"
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -135,5 +135,10 @@ export default {
     services: {
       database: true,
     },
+  },
+
+  plausible: {
+    domain: "https://wevis.info/e-government-service",
+    apiHost: "https://analytics.punchup.world",
   },
 };

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/firebase": "^7.6.1",
-    "@wevisdemo/ui": "^0.0.0",
+    "@wevisdemo/ui": "^2.0.0",
     "chart.js": "^3.7.0",
     "core-js": "^3.19.3",
     "element-ui": "^2.15.6",

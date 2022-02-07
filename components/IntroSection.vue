@@ -1,6 +1,6 @@
 <template>
   <div class="intro-section">
-    <template v-if="!['mobile', 'tablet'].includes($mq)">
+    <template v-if="render && !['mobile', 'tablet'].includes($mq)">
       <img
         v-for="(item, index) in number_images"
         :ref="`floating_image_${item}`"
@@ -23,41 +23,42 @@
 
     <div class="content">
       <div class="b1">
-        <div>ตั้งแต่เกิดจนตายลง เราต่างต้องเกี่ยวข้องกับบริการของภาครัฐ</div>
+        <div>
+          ตั้งแต่เกิดจนตาย.. เราทุกคนต่างต้องเกี่ยวข้องกับบริการของภาครัฐ
+        </div>
 
         <div>
           โดยรัฐเองก็พยายามทำบริการให้อยู่ในรูปแบบเว็บไซต์และแอปพลิเคชัน
-          เรียกว่า
         </div>
 
-        <div>e-Government Service เพื่อให้บริการประชาชน</div>
+        <div>หรือ E-Government Service เพื่อให้บริการประชาชน</div>
       </div>
 
       <button @click="show_dialog = true" class="b2">
-        งงว่า e-Government Service คืออะไร <b>คลิก!</b>
+        งงว่า E-Government Service คืออะไร <b>คลิก!</b>
       </button>
 
       <div class="b1">
-        <div>
-          จากประสบการณ์ตรง เราพบว่า หลายบริการมีช่องทางเข้าถึงที่หลากหลาย
-        </div>
+        <div>ใครได้เคยลิ้มรสประสบการณ์ใช้งาน E-Government Service ก็พบว่า</div>
 
         <div>
-          เว็บเอย แอปเอย ไลน์เอย
-          แถมมีหน้าตาภาษาที่อาจจะไม่ได้เป็นมิตรเท่าไหร่สำหรับ
+          บริการต่างๆ มีช่องทางเข้าถึงที่หลากหลาย ทั้งเว็บไซต์ ทั้งไลน์
+          และแอปพลิเคชั่น
         </div>
+
+        <div>แถมมีหน้าตาภาษาที่อาจจะไม่ง่ายต่อการเข้าถึงเท่าไหร่</div>
 
         <div>
-          มือใหม่หลายคน ไหนๆ เราก็เสียเวลางมไปแล้ว
-          เลยอยากมาแชร์วิธีใช้งานที่คิดว่า
+          ไหนๆ ก็ต้องใช้เหมือนกันทุกคนแล้ว
+          เราจึงอาสารีวิวและรวบรวมวิธีใช้งานที่คิดว่า
         </div>
 
-        <div>น่าจะสะดวกที่สุดมาเผื่อแผ่ทุกคน</div>
+        <div>น่าจะสะดวกที่สุดมาบอกทุกคน</div>
       </div>
     </div>
 
     <el-dialog :visible.sync="show_dialog" width="490px">
-      <div class="b1"><b>e-Government Service คืออะไร?</b></div>
+      <div class="b1"><b>E-Government Service คืออะไร?</b></div>
 
       <div class="b2">
         การบริการของภาครัฐผ่านช่องทางออนไลน์เพื่อ
@@ -65,7 +66,7 @@
       </div>
 
       <div class="b1" style="margin-top: 20px">
-        <b>e-Government Service มีประโยชน์อย่างไร?</b>
+        <b>E-Government Service มีประโยชน์อย่างไร?</b>
       </div>
 
       <div class="b2">
@@ -87,6 +88,7 @@ export default {
       life_hack_image: require("~/assets/images/intro/head.svg"),
       point_emoji: require("~/assets/images/emoji/point.png"),
       show_dialog: false,
+      render: false,
     };
   },
   computed: {
@@ -101,7 +103,9 @@ export default {
       return nums;
     },
   },
-  mounted() {
+  async mounted() {
+    this.render = true;
+    await this.$nextTick();
     this.floatimages();
   },
   methods: {
@@ -260,7 +264,7 @@ export default {
     }
   }
   .content {
-    max-width: 650px;
+    max-width: 660px;
     margin: 0 auto;
     padding: 70px 0 140px 0;
     position: relative;

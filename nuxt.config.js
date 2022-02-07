@@ -82,9 +82,10 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "element-ui/lib/theme-chalk/index.css",
-    "@wevisdemo/ui/components/styles.css",
     "~/assets/styles/font.css",
     "~/assets/styles/index.scss",
+    "@wevisdemo/ui/styles/typography.css",
+    "@wevisdemo/ui/styles/components.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

@@ -13,7 +13,7 @@
 
       <div class="research-wrap">
         <div class="h7">
-          ผลการสำรวจ <b>UN e-Government Service survey 2020</b><br />
+          ผลการสำรวจ <b>UN E-Government Survey 2020</b><br />
           จาก 193 ประเทศสมาชิกสหประชาชาติ
         </div>
 
@@ -78,18 +78,20 @@
           class="thinking-emoji"
         />
 
-        <div class="b1">สงสัยล่ะสิ ว่าเค้าใช้เกณฑ์อะไรในการประเมิน</div>
+        <div class="b1">สงสัยใช่ไหม.. ว่าใช้เกณฑ์อะไรในการประเมิน</div>
       </div>
 
       <div class="egdi-wrap">
         <div class="head">
           <h5>
-            <b>E-Government Development Index (EGDI)</b> มีเกณฑ์ในการวัด 3 ด้าน
+            <b>E-Government Development Index (EGDI)</b><br />มีเกณฑ์ในการวัด 3
+            ด้าน
           </h5>
 
           <div class="b1">
-            ซึ่งไม่ได้เน้นการวัดเพื่อพัฒนาตามเป้าหมาของ Gov- e-Service โดยตรง
-            ส่วนใหญ่เน้นวัดการปฏิบัติงานของรัฐบาลรองรับระดับชาติให้สัมพันธ์กัน
+            ซึ่งไม่ได้เน้นการวัดเพื่อพัฒนาตามเป้าหมายของ E-Government Service
+            โดยตรง<br />
+            ส่วนใหญ่เน้นวัดการปฏิบัติงานของรัฐบาลรองรับต่อระดับชาติให้สัมพันธ์กัน
           </div>
         </div>
 
@@ -163,7 +165,7 @@
                 <div class="item">
                   <img :src="tii_1_emoji" :alt="tii_1_emoji" class="emoji" />
 
-                  <div class="b2">จำนวนผู้ใช้โทรศัพทฺบ้านต่อประชากร 100 คน</div>
+                  <div class="b2">จำนวนผู้ใช้โทรศัพท์บ้านต่อประชากร 100 คน</div>
                 </div>
 
                 <div class="item">
@@ -218,7 +220,7 @@
               <img :src="hci_1_emoji" :alt="hci_1_emoji" class="emoji" />
 
               <div class="b2 head-text">
-                อัตราการรู้หนังสือในผู้ใหญ่ (Adult Literacy)
+                อัตราการรู้หนังสือในผู้ใหญ่<br />(Adult Literacy)
               </div>
 
               <div class="b3">
@@ -229,7 +231,8 @@
               <img :src="hci_2_emoji" :alt="hci_2_emoji" class="emoji" />
 
               <div class="b2 head-text">
-                อัตราส่วนการลงทะเบียนทั้งหมดภายในประเทศ (Gross Enrollment Ratio)
+                อัตราส่วนการลงทะเบียนทั้งหมดภายในประเทศ<br />(Gross Enrollment
+                Ratio)
               </div>
 
               <div class="b3">
@@ -240,7 +243,8 @@
               <img :src="hci_3_emoji" :alt="hci_3_emoji" class="emoji" />
 
               <div class="b2 head-text">
-                จำนวนปีที่คาดว่าจะได้รับการศึกษา (Expected Years of schooling)
+                จำนวนปีที่คาดว่าจะได้รับการศึกษา<br />(Expected Years of
+                schooling)
               </div>
 
               <div class="b3">
@@ -251,10 +255,12 @@
               <img :src="hci_4_emoji" :alt="hci_4_emoji" class="emoji" />
 
               <div class="b2 head-text">
-                จำนวนปีเฉลี่ยที่ได้รับการศึกษา (Mean years of schooling)
+                จำนวนปีเฉลี่ยที่ได้รับการศึกษา<br />(Mean years of schooling)
               </div>
 
-              <div class="b3">จำนวนปีเฉลี่ยของการศึกษา ไม่รวมปีที่เรียนซ้ำ</div>
+              <div class="b3">
+                จำนวนปีเฉลี่ยของการศึกษา<br />ไม่รวมปีที่เรียนซ้ำ
+              </div>
             </div>
           </div>
         </div>
@@ -283,8 +289,8 @@
         <div class="head">
           <h5>
             ส่วน
-            <b>e-participation index (EPI)</b>
-            ใช้วัดการสร้างความโปร่งใสของภาครัฐ ในการเปิดโอกาสให้ภาคประชาชน
+            <b>E-Participation Index (EPI)</b><br />
+            ใช้วัดการสร้างความโปร่งใสของภาครัฐ<br />ในการเปิดโอกาสให้ภาคประชาชน<br />
             ได้เข้ามามีส่วนร่วม 3 ระดับ
           </h5>
         </div>
@@ -294,7 +300,7 @@
             <img :src="e_1_emoji" :alt="e_1_emoji" />
 
             <div class="card">
-              <div class="b1"><b>E-information</b></div>
+              <div class="b1"><b>E-Information</b></div>
 
               <div class="b2">
                 เป็นสื่อสารทางเดียวจากรัฐที่เปิดให้ข้อมูลสาธารณะแก่ประชาชนผ่านเว็บไซต์
@@ -308,7 +314,7 @@
             <img :src="e_2_emoji" :alt="e_2_emoji" />
 
             <div class="card">
-              <div class="b1"><b>E-consultation</b></div>
+              <div class="b1"><b>E-Consultation</b></div>
 
               <div class="b2">
                 เปิดให้เป็นการสื่อสารสองทางมากขึ้น ที่รัฐมีปฏิสัมพันธ์กับประชาชน
@@ -324,7 +330,7 @@
             <img :src="e_3_emoji" :alt="e_3_emoji" />
 
             <div class="card">
-              <div class="b1"><b>E-decision-making</b></div>
+              <div class="b1"><b>E-Decision-Making</b></div>
 
               <div class="b2">
                 มีช่องทางเปิดการมีส่วนร่วมประชาชน
@@ -397,9 +403,9 @@
           </div>
 
           <div class="h7">
-            แม้ e-service ในประเทศไทยจะไม่ถือว่าแย่
-            แต่เราเชื่อว่ามันสามารถดีได้กว่านี้อีก!
-            เพื่อรองรับแนวโน้มการใช้อินเทอร์เน็ตของคนไทยที่เพิ่มขึ้นเรื่อยๆ
+            แม้ E-Government Service ในประเทศไทยจะไม่ถือว่าแย่ แต่เราเชื่อว่า
+            สามารถดีกว่านี้ได้อีก! เพื่อรองรับแนวโน้มการใช้อินเทอร์เน็ต
+            ของคนไทยที่เพิ่มขึ้นเรื่อยๆ
           </div>
         </div>
       </div>
@@ -552,7 +558,7 @@ export default {
       margin-top: 90px;
     }
     .head {
-      max-width: 650px;
+      max-width: 674px;
       margin: 0 auto;
       h5 {
         font-weight: normal;

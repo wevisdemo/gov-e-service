@@ -11,9 +11,8 @@
       <img :src="letter_emoji" :alt="letter_emoji" class="emoji" />
 
       <div class="title b1">
-        นอกเหนือจากที่เรารวบรวมมาให้
-        คุณมีช่องทางอื่นอยากแนะนำหรือแชร์ปัญหาเกี่ยวกับการใช้งาน e-Government
-        Service อื่นๆ อีกไหม
+        นอกเหนือจากที่เรารวบรวมมาให้ คุณมีช่องทางอื่นอยากแนะนำ<br />
+        หรือแชร์ปัญหาเกี่ยวกับการใช้งาน E-Government Service อื่นๆ อีกไหม<br />
         <b>เราจะรวบรวมไปยื่นต่อสำนักงานพัฒนารัฐบาลดิจิทัล (DGA) ให้</b>
       </div>
 
@@ -23,7 +22,7 @@
           :autosize="{ minRows: 10, maxRows: 10 }"
           maxlength="1000"
           v-model="form.problem"
-          placeholder="เล่าปัญหาการใช้งาน Gov-e-service...(ไม่เกิน 1,000 ตัวอักษร)"
+          placeholder="แนะนำช่องทางอื่นหรือเล่าปัญหาการใช้งาน E-Government Service…(ไม่เกิน 1,000 ตัวอักษร)"
           class="b2"
           @focus="textarea_focus = true"
         >
@@ -86,7 +85,7 @@
     </el-dialog>
 
     <div class="share-wrap">
-      <div class="b2">แชร์ไปบอกบุญต่อ</div>
+      <div class="b2">แชร์ไปบอกต่อ</div>
 
       <div class="social">
         <img

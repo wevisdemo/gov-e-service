@@ -123,14 +123,13 @@ export default {
 
   firebase: {
     config: {
-      apiKey: "AIzaSyAc2DCO4B8HvymfpYLz6En3Gy1fSBdrdEk",
-      authDomain: "gov-e-service.firebaseapp.com",
-      databaseURL:
-        "https://gov-e-service-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "gov-e-service",
-      storageBucket: "gov-e-service.appspot.com",
-      messagingSenderId: "903415504860",
-      appId: "1:903415504860:web:9052a8a7a0e76efa02b919",
+      apiKey: process.env.FIREBASE_apiKey,
+      authDomain: process.env.FIREBASE_authDomain,
+      databaseURL: process.env.FIREBASE_databaseURL,
+      projectId: process.env.FIREBASE_projectId,
+      storageBucket: process.env.FIREBASE_storageBucket,
+      messagingSenderId: process.env.FIREBASE_messagingSenderId,
+      appId: process.env.FIREBASE_appId,
     },
     services: {
       database: true,

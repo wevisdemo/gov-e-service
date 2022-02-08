@@ -23,15 +23,19 @@
 
     <div class="content">
       <div class="b1">
-        <div>
+        <span>
           ตั้งแต่เกิดจนตาย.. เราทุกคนต่างต้องเกี่ยวข้องกับบริการของภาครัฐ
-        </div>
+        </span>
 
-        <div>
+        <br />
+
+        <span>
           โดยรัฐเองก็พยายามทำบริการให้อยู่ในรูปแบบเว็บไซต์และแอปพลิเคชัน
-        </div>
+        </span>
 
-        <div>หรือ E-Government Service เพื่อให้บริการประชาชน</div>
+        <br />
+
+        <span>หรือ E-Government Service เพื่อให้บริการประชาชน</span>
       </div>
 
       <button @click="show_dialog = true" class="b2">
@@ -39,21 +43,31 @@
       </button>
 
       <div class="b1">
-        <div>ใครได้เคยลิ้มรสประสบการณ์ใช้งาน E-Government Service ก็พบว่า</div>
+        <span
+          >ใครได้เคยลิ้มรสประสบการณ์ใช้งาน E-Government Service ก็พบว่า</span
+        >
 
-        <div>
+        <br />
+
+        <span>
           บริการต่างๆ มีช่องทางเข้าถึงที่หลากหลาย ทั้งเว็บไซต์ ทั้งไลน์
           และแอปพลิเคชั่น
-        </div>
+        </span>
 
-        <div>แถมมีหน้าตาภาษาที่อาจจะไม่ง่ายต่อการเข้าถึงเท่าไหร่</div>
+        <br />
 
-        <div>
+        <span>แถมมีหน้าตาภาษาที่อาจจะไม่ง่ายต่อการเข้าถึงเท่าไหร่</span>
+
+        <br />
+
+        <span>
           ไหนๆ ก็ต้องใช้เหมือนกันทุกคนแล้ว
           เราจึงอาสารีวิวและรวบรวมวิธีใช้งานที่คิดว่า
-        </div>
+        </span>
 
-        <div>น่าจะสะดวกที่สุดมาบอกทุกคน</div>
+        <br />
+
+        <span>น่าจะสะดวกที่สุดมาบอกทุกคน</span>
       </div>
     </div>
 
@@ -142,82 +156,42 @@ export default {
     z-index: 1;
   }
   .x1 {
-    -webkit-animation: animateBubble 15s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 15s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
     animation: animateBubble 15s linear infinite,
       sideWays 2s ease-in-out infinite alternate;
   }
   .x2 {
-    -webkit-animation: animateBubble 10s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 10s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
     animation: animateBubble 10s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
   }
   .x3 {
-    -webkit-animation: animateBubble 14s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 14s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
     animation: animateBubble 14s linear infinite,
       sideWays 2s ease-in-out infinite alternate;
   }
   .x4 {
-    -webkit-animation: animateBubble 11s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 11s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
     animation: animateBubble 11s linear infinite,
       sideWays 3s ease-in-out infinite alternate;
   }
   .x5 {
-    -webkit-animation: animateBubble 14s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 14s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
     animation: animateBubble 14s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
   }
   .x6 {
-    -webkit-animation: animateBubble 10s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 10s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
     animation: animateBubble 10s linear infinite,
       sideWays 2s ease-in-out infinite alternate;
   }
   .x7 {
-    -webkit-animation: animateBubble 10s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 10s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
     animation: animateBubble 10s linear infinite,
       sideWays 2s ease-in-out infinite alternate;
   }
   .x8 {
-    -webkit-animation: animateBubble 11s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 11s linear infinite,
-      sideWays 3s ease-in-out infinite alternate;
     animation: animateBubble 11s linear infinite,
       sideWays 3s ease-in-out infinite alternate;
   }
   .x9 {
-    -webkit-animation: animateBubble 10s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 10s linear infinite,
-      sideWays 4s ease-in-out infinite alternate;
     animation: animateBubble 10s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
   }
   .x10 {
-    -webkit-animation: animateBubble 14s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 14s linear infinite,
-      sideWays 2s ease-in-out infinite alternate;
     animation: animateBubble 14s linear infinite,
       sideWays 2s ease-in-out infinite alternate;
   }
@@ -267,7 +241,7 @@ export default {
     }
   }
   .content {
-    max-width: 660px;
+    max-width: 670px;
     margin: 0 auto;
     padding: 70px 0 140px 0;
     position: relative;
@@ -276,11 +250,13 @@ export default {
       padding: 50px 16px;
     }
     .b1 {
-      > div {
+      > span {
         background: black;
         color: white;
-        display: inline-block;
-        padding: 3px;
+        padding: 4px 10px;
+        @include media-breakpoint(mobile) {
+          display: inline-block;
+        }
       }
     }
     button {
@@ -290,6 +266,7 @@ export default {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 50px;
       background: $color-green;
+      white-space: nowrap;
     }
     button:hover {
       background: white;
@@ -324,44 +301,12 @@ export default {
     top: 10px;
   }
 }
-@-webkit-keyframes animateBubble {
-  0% {
-    margin-top: 1000px;
-  }
-  100% {
-    margin-top: -100%;
-  }
-}
-@-moz-keyframes animateBubble {
-  0% {
-    margin-top: 1000px;
-  }
-  100% {
-    margin-top: -100%;
-  }
-}
 @keyframes animateBubble {
   0% {
-    margin-top: 1000px;
+    margin-top: 2000px;
   }
   100% {
-    margin-top: -100%;
-  }
-}
-@-webkit-keyframes sideWays {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 50px;
-  }
-}
-@-moz-keyframes sideWays {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 50px;
+    margin-top: -2000px;
   }
 }
 @keyframes sideWays {

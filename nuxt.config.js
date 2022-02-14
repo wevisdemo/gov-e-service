@@ -141,7 +141,7 @@ export default {
   },
 
   plausible: {
-    domain: "https://wevis.info/e-government-service",
+    domain: "wevis.info/e-government-service",
     apiHost: "https://analytics.punchup.world",
   },
 };

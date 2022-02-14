@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <WvNavbar>
+    <WvNavbar :homeHref="basePath">
       <WvNavButton v-if="route_name === ''" active
         ><nuxt-link to="/">Home</nuxt-link></WvNavButton
       >
@@ -31,6 +31,11 @@ export default {
     route_name() {
       return this.$route.path.split("/")[1];
     },
+  },
+  data() {
+    return {
+      basePath: process.env.WEB_URL || "/",
+    };
   },
 };
 </script>

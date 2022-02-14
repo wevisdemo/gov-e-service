@@ -106,6 +106,10 @@ export default {
     transpile: [/^element-ui/],
   },
 
+  router: {
+    base: process.env.BASE_PATH || "/",
+  },
+
   styleResources: {
     scss: ["~/assets/styles/variables.scss"],
   },

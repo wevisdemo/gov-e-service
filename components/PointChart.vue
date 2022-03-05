@@ -222,8 +222,13 @@ export default {
   border: none;
   border-radius: 0;
   color: black;
-  max-width: 40vw;
+  max-width: 200px;
   min-width: auto;
+  text-align: left;
+  word-break: break-word;
+  @include media-breakpoint(mobile) {
+    max-width: 40vw;
+  }
   .b3 {
     color: rgba(0, 0, 0, 0.6);
   }

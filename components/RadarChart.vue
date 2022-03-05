@@ -214,6 +214,7 @@ export default {
       background: white;
       color: black;
       position: relative;
+      max-width: 200px;
       @include media-breakpoint(mobile) {
         max-width: 35vw;
         padding: 10px;

@@ -1,5 +1,6 @@
 [
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก Births,deaths, marriages and care",
     "2": "เลือก certificates,register offices , changes of name or gender",
     "3": "เลือก Register a birth",
@@ -35,6 +36,7 @@
     "emoji": "0,8"
   },
   {
+    "0": "",
     "1": "",
     "2": "",
     "3": "",
@@ -70,6 +72,7 @@
     "emoji": ""
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Education and learning'",
     "2": "เลือก 'Universities and higher education'",
     "3": "เลือก Higher education courses : find and apply",
@@ -105,6 +108,7 @@
     "emoji": 0
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ แล้วเลือก Working, Jobs and pensions",
     "2": "เลือก Finding a job",
     "3": "เลือก Find a Job",
@@ -140,6 +144,7 @@
     "emoji": 0
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Citizenship and living in the UK'",
     "2": "เลือก Voting",
     "3": "เลือก Register to vote \nหมายเหตุ : ต้องลงทะเบียนเพื่อจะได้รับข้อมูลผู้สมัคร และปรับเปลี่ยนข้อมูลการ Vote ได้",
@@ -175,6 +180,7 @@
     "emoji": 0
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก Driving and transport",
     "2": "เลือก 'Driving licences'",
     "3": "เลือก 'Apply for your first provisional driving license'",
@@ -210,6 +216,7 @@
     "emoji": "0,10"
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก Passports , travel and living abroad",
     "2": "เลือก 'passport'",
     "3": "เลือก 'Apply online for UK passport'",
@@ -245,6 +252,7 @@
     "emoji": "0,11"
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Housing and local services'",
     "2": "เลือก 'Owning and renting a property'",
     "3": "เลือก 'registering land or property with HM land registry'",
@@ -280,6 +288,7 @@
     "emoji": "0,11"
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Births,deaths, marriages and care'",
     "2": "เลือก 'Marriage, civil partnership and divorce'",
     "3": "เลือก 'Marriages and civil partnerships in England and Wales'",
@@ -315,6 +324,7 @@
     "emoji": "0,13"
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Births,deaths, marriages and care'",
     "2": "เลือก 'Marriage, civil partnership and divorce'",
     "3": "เลือก 'Get a divorce'",
@@ -350,6 +360,7 @@
     "emoji": "0,9"
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Money and tax'",
     "2": "เลือก 'National Insurance'",
     "3": "เลือก 'Apply for a National Insurance number'",
@@ -385,6 +396,7 @@
     "emoji": 0
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วกด 'Coronavirus (COVID-19)'",
     "2": "กด 'Book your vaccination appointment online'",
     "3": "กด 'Book or manage your vaccination appointments'",
@@ -420,6 +432,7 @@
     "emoji": 0
   },
   {
+    "0": "ช่องทาง : เว็บไซต์",
     "1": "เข้าไปที่เว็บไซต์ https://www.gov.uk/ \nแล้วเลือก 'Births,deaths, marriages and care'",
     "2": "เลือก Death and bereavement",
     "3": "เลือก 'Register a death'",
